@@ -1,26 +1,23 @@
-import React from 'react'
+import './TypeSelector.css'
 
 const TypeSelector = ({ setType }) => {
+    const types = [
+        'bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting',
+        'fire', 'flying', 'ghost', 'grass', 'ground', 'ice',
+        'normal', 'poison', 'psychic', 'rock', 'steel', 'water'
+    ]
+
     return (
-        <div>
-            <button onClick={() => setType('fire')}>Fire</button>
-            <button onClick={() => setType('water')}>Water</button>
-            <button onClick={() => setType('grass')}>Grass</button>
-            <button onClick={() => setType('electric')}>Electric</button>
-            <button onClick={() => setType('psychic')}>Psychic</button>
-            <button onClick={() => setType('ice')}>Ice</button>
-            <button onClick={() => setType('dragon')}>Dragon</button>
-            <button onClick={() => setType('dark')}>Dark</button>
-            <button onClick={() => setType('fairy')}>Fairy</button>
-            <button onClick={() => setType('normal')}>Normal</button>
-            <button onClick={() => setType('fighting')}>Fighting</button>
-            <button onClick={() => setType('flying')}>Flying</button>
-            <button onClick={() => setType('poison')}>Poison</button>
-            <button onClick={() => setType('ground')}>Ground</button>
-            <button onClick={() => setType('rock')}>Rock</button>
-            <button onClick={() => setType('bug')}>Bug</button>
-            <button onClick={() => setType('ghost')}>Ghost</button>
-            <button onClick={() => setType('steel')}>Steel</button>
+        <div className="type-selector">
+            {types.map((type) => (
+                <button
+                    key={type}
+                    className={`type-btn type-btn--${type}`}
+                    onClick={() => setType(type)}
+                >
+                    {type}
+                </button>
+            ))}
         </div>
     )
 }
