@@ -18,17 +18,17 @@ const PokemonGrid = ({ type }) => {
         fetchData()
     }, [type])
 
-    if (!data) {
-        return <div>Loading...</div>
-    }
+    if (!type) return <div>Select a type to see Pokemon!</div>
+
+    if (!data) return <div>Loading...</div>
 
     return (
-    <div>
-        {data.pokemon.map((poke) => {
-            return <PokemonCard key={poke.pokemon.name} name={poke.pokemon.name} />
-        })}
-    </div>
-  )
+        <div>
+            {data.pokemon.map((poke) => {
+                return <PokemonCard key={poke.pokemon.name} name={poke.pokemon.name} />
+            })}
+        </div>
+    )
 }
 
 export default PokemonGrid
