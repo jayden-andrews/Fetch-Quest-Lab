@@ -21,6 +21,6 @@ This project uses the [PokéAPI](https://pokeapi.co/docs/v2) which is a free, op
    npm run dev
 ```
 
-## Technical Challenges
+## Technical Challenge
 
 One challenge I encountered was figuring out how to iterate over the data returned from the API. The PokéAPI returns Pokémon data as nested objects within arrays, so I had to research how to properly access and handle each object, which led me to learn about the .map() method. Understanding .map() not only solved the looping problem but also taught me how to dynamically render components, which is how each Pokémon sprite card gets displayed on the page.
