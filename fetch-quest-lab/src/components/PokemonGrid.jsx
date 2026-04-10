@@ -19,9 +19,9 @@ const PokemonGrid = ({ type }) => {
         fetchData()
     }, [type])
 
-    if (!type) return <div>Select a type to see Pokemon!</div>
+    if (!type) return <div className="message">Select a type to see Pokemon!</div>
 
-    if (!data) return <div>Loading...</div>
+    if (!data) return <div className="message">Loading...</div>
 
     return (
         <div className="pokemon-grid">
