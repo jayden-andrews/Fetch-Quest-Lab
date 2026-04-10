@@ -10,6 +10,17 @@
     margin: 0 auto;
 }
 
+.type-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+  
+
 .type-btn {
     font-family: 'Press Start 2P', monospace;
     font-size: 9px;
@@ -23,7 +34,10 @@
     text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
     box-shadow: 0 3px 0px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+    flex: 1 1 120px;
+    max-width: 160px;
 }
+
 
 .type-btn:hover {
     transform: translateY(-2px);
