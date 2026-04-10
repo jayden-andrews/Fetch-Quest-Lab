@@ -22,7 +22,7 @@ function App() {
     <div className="app">
       <audio ref={audioRef} src="./src/assets/20 - Pokémon Center.mp3" loop />
       <div className="pokedex-screen">
-        <h1 className="app-title">Pokédex</h1>
+        <h1 className="app-title">Pokémon Viewer</h1>
         <button className="music-btn" onClick={toggleMusic}></button>
         <TypeSelector setType={setType} />
         <PokemonGrid type={type} />
