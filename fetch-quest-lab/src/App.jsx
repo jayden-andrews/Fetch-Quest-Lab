@@ -7,14 +7,14 @@ function App() {
   const [type, setType] = useState('')
 
   return (
-    <>
-      <div>
-        <h1>Pokemon Viewer</h1>
-        <TypeSelector setType={setType} />
-        <PokemonGrid type={type} />
-      </div>
-    </>
-  )
+  <div className="app">
+    <div className="pokedex-screen">
+      <h1 className="app-title">Pokemon Viewer</h1>
+      <TypeSelector setType={setType} />
+      <PokemonGrid type={type} />
+    </div>
+  </div>
+)
 }
 
 export default App

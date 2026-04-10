@@ -1,5 +1,6 @@
 import PokemonCard from './PokemonCard'
 import { useState, useEffect } from 'react'
+import './PokemonGrid.css'
 
 const PokemonGrid = ({ type }) => {
     const [data, setData] = useState(null)
@@ -23,7 +24,7 @@ const PokemonGrid = ({ type }) => {
     if (!data) return <div>Loading...</div>
 
     return (
-        <div>
+        <div className="pokemon-grid">
             {data.pokemon.map((poke) => {
                 return <PokemonCard key={poke.pokemon.name} name={poke.pokemon.name} />
             })}
